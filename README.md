@@ -8,4 +8,4 @@
 5. Postaviti na github kod u novi repozitorij
 6. U readme.md napisati koje su točke realizirane
 7. Sav kod kucati iz 0, ne raditi copy/paste
-8. Imenovati pakete prezime.terminal
+8. ~Imenovati pakete prezime.terminal~
