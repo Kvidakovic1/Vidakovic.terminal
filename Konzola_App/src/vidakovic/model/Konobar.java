@@ -50,5 +50,12 @@ public class Konobar extends Entitet {
 	public void setIban(String iban) {
 		this.iban = iban;
 	}
+	
+	@Override
+	public String toString() {
+		return ime + " " +  prezime;
+	}
 
 }
+
+

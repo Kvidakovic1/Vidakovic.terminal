@@ -40,5 +40,10 @@ public class Gost extends Entitet {
 	public void setBroj_telefona(String broj_telefona) {
 		this.broj_telefona = broj_telefona;
 	}
+	
+	@Override
+	public String toString() {
+		return ime + " " +  prezime;
+	}
 
 }
