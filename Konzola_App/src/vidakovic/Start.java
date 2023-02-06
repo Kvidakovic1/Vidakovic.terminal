@@ -1,10 +1,11 @@
-//cd /d E:\java
+//cd /d E:\java 
 //E:\Java\Vidakovic.terminal\Konzola_App\bin>java vidakovic.Start dev
 
 package vidakovic;
 
 import java.util.Scanner;
 
+import vidakovic.obrada.Artikli;
 import vidakovic.obrada.Gosti;
 import vidakovic.obrada.Konobari;
 
@@ -12,12 +13,14 @@ public class Start {
 
 	private Konobari konobari;
 	private Gosti gosti;
+	private Artikli artikli;
 
 	public Start() {
 
 		Pomocno.ulaz = new Scanner(System.in);
 		konobari = new Konobari(this);
 		gosti = new Gosti(this);
+		artikli = new Artikli(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 	}
@@ -41,6 +44,9 @@ public class Start {
 		case 2:
 			gosti.izbornik();
 			break;
+		case 3:
+			artikli.izbornik();
+			
 		case 7:
 			System.out.println("Doviđenja!");
 			break;

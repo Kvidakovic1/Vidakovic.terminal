@@ -62,6 +62,7 @@ public class Konobari {
 			} else {
 				promjena();
 			}
+			break;
 		case 4:
 			if (konobari.size() == 0) {
 				System.out.println("Nema konobra kojeg bi obrisali");
@@ -69,6 +70,7 @@ public class Konobari {
 			} else {
 				brisanje();
 			}
+			break;
 
 		case 5:
 			start.glavniIzbornik();
@@ -103,7 +105,7 @@ public class Konobari {
 
 	private Konobar unesiNovogKonobara() {
 		Konobar k = new Konobar();
-		k.setSifra(Pomocno.unosBrojaRaspon("Unesi sifru konobara", 0, Integer.MAX_VALUE));
+		k.setSifra(Pomocno.unosBrojaRaspon("Unesi sifru konobara: ", 0, Integer.MAX_VALUE));
 		k.setIme(Pomocno.unosTeksta("Unesite ime konobara: "));
 		k.setPrezime(Pomocno.unosTeksta("Unesite prezime konobara: "));
 		k.setOib(Pomocno.unosTeksta("Unesite oib: "));

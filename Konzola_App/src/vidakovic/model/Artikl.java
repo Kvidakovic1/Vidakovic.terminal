@@ -42,5 +42,8 @@ public class Artikl extends Entitet {
 	public void setKategorija(String kategorija) {
 		this.kategorija = kategorija;
 	}
-
+	@Override
+	public String toString() {
+		return naziv + " " + cijena;
+	}
 }

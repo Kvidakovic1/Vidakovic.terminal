@@ -1,5 +1,6 @@
 package vidakovic;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -43,5 +44,21 @@ public class Pomocno {
 				System.out.println("Niste unijeli nista");
 			}
 		}
+	}
+	
+	public static BigDecimal unosCijene(String poruka) {
+		BigDecimal i;
+		
+		while(true) {
+			
+				System.out.println(poruka);
+				i = ulaz.nextBigDecimal();
+				
+			return i;
+			
+			
+		}
+		
+		
 	}
 }
