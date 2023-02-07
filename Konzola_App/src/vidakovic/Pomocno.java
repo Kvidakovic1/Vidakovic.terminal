@@ -45,20 +45,13 @@ public class Pomocno {
 			}
 		}
 	}
-	
+
 	public static BigDecimal unosCijene(String poruka) {
-		BigDecimal i;
-		
-		while(true) {
-			
-				System.out.println(poruka);
-				i = ulaz.nextBigDecimal();
-				
-			return i;
-			
-			
-		}
-		
-		
+
+		System.out.println(poruka);
+		String s = ulaz.nextLine();
+		return new BigDecimal(s);
+
 	}
+
 }

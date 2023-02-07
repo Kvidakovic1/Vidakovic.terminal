@@ -113,7 +113,7 @@ public class Gosti {
 
 	}
 
-	private void pregled(boolean prikaziIzbornik) {
+	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Gosti u aplikaciji");
 		System.out.println("---------");
 		int rb = 1;

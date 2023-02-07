@@ -115,7 +115,7 @@ public class Konobari {
 
 	}
 
-	private void pregled(boolean prikaziIzbornik) {
+	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Konobari u aplikaciji");
 		System.out.println("---------");
 		int rb = 1;

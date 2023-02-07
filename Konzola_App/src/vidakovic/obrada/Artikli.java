@@ -1,5 +1,6 @@
 package vidakovic.obrada;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +18,16 @@ public class Artikli {
 		super();
 		this.start = start;
 		artikli = new ArrayList<>();
+		testPodaci();
 	}
 	
+	private void testPodaci() {
+		artikli.add(new Artikl(1, "Sendvic", new BigDecimal("3.4"), "Hrana"));
+		artikli.add(new Artikl(2, "Pizza", new BigDecimal("6.59"), "Hrana"));
+		artikli.add(new Artikl(3, "Coca cola", new BigDecimal("2.89"), "Hrana"));
+		
+	}
+
 	public void izbornik() {
 		System.out.println("");
 		System.out.println("*Artikl izbornik*");
@@ -40,26 +49,47 @@ public class Artikli {
 			unosNovog();
 			break;
 		case 3:
-//			if (artikli.size() == 0) {
-//				System.out.println("Nema konobara kojeg bi mjenjali");
-//				izbornik();
-//			} else {
-//				promjena();
-//			}
+			if (artikli.size() == 0) {
+				System.out.println("Nema artikla kojeg bi mjenjali");
+				izbornik();
+			} else {
+				promjena();
+			}
+			break;
 		case 4:
-//			if (artikli.size() == 0) {
-//				System.out.println("Nema konobra kojeg bi obrisali");
-//				izbornik();
-//			} else {
-//				brisanje();
-//			}
+			if (artikli.size() == 0) {
+				System.out.println("Nema artikla kojeg bi obrisali");
+				izbornik();
+			} else {
+				brisanje();
+			}
+			break;
 
 		case 5:
 			start.glavniIzbornik();
+			
 		}
 
 	}
 	
+	private void brisanje() {
+		pregled(false);
+		int rb = Pomocno.unosBrojaRaspon("Odaberite artikl koji zelite obrisati: ", 1, artikli.size());
+		artikli.remove(rb -1);
+		izbornik();
+		
+	}
+
+	private void promjena() {
+		pregled(false);
+		int rb = Pomocno.unosBrojaRaspon("Unesite artikl kojie zelite mjenjati: ", 1, artikli.size());
+		Artikl a = artikli.get(rb -1);
+		a.setNaziv(Pomocno.unosTeksta("Unesite naziv novog artikla: "));
+		a.setCijena(Pomocno.unosCijene("Unesite cijenu novog artikla: "));
+		a.setKategorija(Pomocno.unosTeksta("Unesite kategoriju novog artikla"));
+		izbornik();
+	}
+
 	private void unosNovog() {
 		artikli.add(unesiNoviArtikl());
 		izbornik();
