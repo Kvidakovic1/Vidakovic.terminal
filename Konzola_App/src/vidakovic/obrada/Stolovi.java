@@ -91,6 +91,7 @@ public class Stolovi {
 		int i = Pomocno.unosBrojaRaspon("Unesite kojeg konobara zelite za stol: ", 1,
 				start.getKonobari().getKonobari().size());
 		s.setKonobar(start.getKonobari().getKonobari().get(i - 1));
+		izbornik();
 
 	}
 

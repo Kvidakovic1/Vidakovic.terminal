@@ -1,4 +1,4 @@
-//cd /d E:\java  
+//cd /d E:\java   
 //E:\Java\Vidakovic.terminal\Konzola_App\bin>java vidakovic.Start dev
 
 package vidakovic;
@@ -119,7 +119,8 @@ public class Start {
 	public void setNarudbe(Narudbe narudbe) {
 		this.narudbe = narudbe;
 	}
-
+	
+	
 
 
 	public static void main(String[] args) {

@@ -16,14 +16,18 @@ public class Narudbe {
 		super();
 		this.start = start;
 		narudbe = new ArrayList<>();
+		
 	}
 
 	public Narudbe(List<Narudba> narudbe, Start start) {
 		super();
 		this.narudbe = narudbe;
 		this.start = start;
+		
 
 	}
+
+	
 
 	public void izbornik() {
 		System.out.println("");
@@ -45,10 +49,44 @@ public class Narudbe {
 		case 2:
 			unosNovog();
 			break;
+		case 3:
+			if(narudbe.size() ==  0) {
+				System.out.println("Nema narudbi koje bi mjenjali");
+			}
+			else {
+				promjena();
+			}
+			
+			break;
+		case 4:
+			if(narudbe.size() == 0){
+				System.out.println("Nema narudbi koje bi obrisali");
+			}else {
+				brisanje();
+			}
 		case 5:
 			start.glavniIzbornik();
 		}
 
+	}
+
+	private void brisanje() {
+		pregled(false);
+		int i = Pomocno.unosBrojaRaspon("Odaberite narudbu kojue zelite obrisati", 1, narudbe.size());
+		narudbe.remove(i-1);
+		izbornik();
+		
+	}
+
+	private void promjena() {
+		pregled(false);
+		int i = Pomocno.unosBrojaRaspon("Unesite nardubu koju zelite mjenjati", 1, narudbe.size());
+		Narudba n = narudbe.get(i-1);
+		start.getStolovi().pregled(false);
+		int j = Pomocno.unosBrojaRaspon("Unesite koji stol zelite", 0, Integer.MAX_VALUE);
+		n.setStol(start.getStolovi().getStolovi().get(j-1));
+		izbornik();
+		
 	}
 
 	private void unosNovog() {
@@ -60,12 +98,13 @@ public class Narudbe {
 				start.getStolovi().getStolovi().size());
 		n.setStol(start.getStolovi().getStolovi().get(i - 1));
 
-		while (true) {
-			start.getGosti().pregled(false);
-			i = Pomocno.unosBrojaRaspon("Odaberite goste za dodavanje na stol: ", 1,
-					start.getGosti().getGosti().size());
-			n.getGosti().add(start.getGosti().getGosti().get(i-1));
-		}
+//		while (true) {
+//			start.getGosti().pregled(false);
+//			i = Pomocno.unosBrojaRaspon("Odaberite goste za dodavanje na stol: ", 1,
+//					start.getGosti().getGosti().size());
+//			n.getGosti().add(
+//					start.getGosti().getGosti().get(i-1));
+//		}
 
 		narudbe.add(n);
 		izbornik();
