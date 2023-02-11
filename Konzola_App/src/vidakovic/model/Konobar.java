@@ -18,6 +18,13 @@ public class Konobar extends Entitet {
 		this.oib = oib;
 		this.iban = iban;
 	}
+	
+
+	public Konobar(String ime, String prezime) {
+		super();
+		this.ime = ime;
+		this.prezime = prezime;
+	}
 
 	public String getIme() {
 		return ime;

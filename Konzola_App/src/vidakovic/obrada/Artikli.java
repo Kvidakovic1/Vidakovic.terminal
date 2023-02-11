@@ -109,7 +109,7 @@ public class Artikli {
 
 	}
 	
-	private void pregled(boolean prikaziIzbornik) {
+	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Artikli u aplikaciji");
 		System.out.println("---------");
 		int rb = 1;

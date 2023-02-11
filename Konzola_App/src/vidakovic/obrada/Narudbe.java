@@ -51,7 +51,7 @@ public class Narudbe {
 			break;
 		case 3:
 			if(narudbe.size() ==  0) {
-				System.out.println("Nema narudbi koje bi mjenjali");
+				System.out.println("Nema narudbi koje bi mjenjali!");
 			}
 			else {
 				promjena();
@@ -60,7 +60,7 @@ public class Narudbe {
 			break;
 		case 4:
 			if(narudbe.size() == 0){
-				System.out.println("Nema narudbi koje bi obrisali");
+				System.out.println("Nema narudbi koje bi obrisali!");
 			}else {
 				brisanje();
 			}
@@ -100,10 +100,10 @@ public class Narudbe {
 
 //		while (true) {
 //			start.getGosti().pregled(false);
-//			i = Pomocno.unosBrojaRaspon("Odaberite goste za dodavanje na stol: ", 1,
+//			int j = Pomocno.unosBrojaRaspon("Odaberite goste za dodavanje na stol: ", 1,
 //					start.getGosti().getGosti().size());
 //			n.getGosti().add(
-//					start.getGosti().getGosti().get(i-1));
+//					start.getGosti().getGosti().get(j-1));
 //		}
 
 		narudbe.add(n);
@@ -111,7 +111,7 @@ public class Narudbe {
 
 	}
 
-	private void pregled(boolean prikaziIzbornik) {
+	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Trenutne narudbe");
 		System.out.println("---------");
 		int rb = 1;

@@ -3,11 +3,12 @@
 
 package vidakovic;
 
-import java.util.Scanner; 
+import java.util.Scanner;
 
 import vidakovic.obrada.Artikli;
 import vidakovic.obrada.Gosti;
 import vidakovic.obrada.Konobari;
+import vidakovic.obrada.Narucivanja;
 import vidakovic.obrada.Narudbe;
 import vidakovic.obrada.Stolovi;
 
@@ -18,6 +19,7 @@ public class Start {
 	private Artikli artikli;
 	private Stolovi stolovi;
 	private Narudbe narudbe;
+	private Narucivanja narucivanja;
 
 	public Start() {
 
@@ -27,11 +29,10 @@ public class Start {
 		artikli = new Artikli(this);
 		stolovi = new Stolovi(this);
 		narudbe = new Narudbe(this);
+		narucivanja = new Narucivanja(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 	}
-
-	
 
 	public void glavniIzbornik() {
 		System.out.println("");
@@ -42,6 +43,7 @@ public class Start {
 		System.out.println("3. Artikl");
 		System.out.println("4. Stol");
 		System.out.println("5. Narudbe");
+		System.out.println("6. Narucivanja");
 		System.out.println("7. Izlaz iz programa");
 		odabirGlavnogIzbornika();
 	}
@@ -63,7 +65,10 @@ public class Start {
 		case 5:
 			narudbe.izbornik();
 			break;
-			
+		case 6:
+			narucivanja.izbornik();
+			break;
+
 		case 7:
 			System.out.println("Doviđenja!");
 			break;
@@ -76,7 +81,15 @@ public class Start {
 		System.out.println("Dobrodošli u Restoran terminal aplikaciju");
 
 	}
-	
+
+	public Narucivanja getNarucivanja() {
+		return narucivanja;
+	}
+
+	public void setNarucivanja(Narucivanja narucivanja) {
+		this.narucivanja = narucivanja;
+	}
+
 	public Konobari getKonobari() {
 		return konobari;
 	}
@@ -108,20 +121,14 @@ public class Start {
 	public void setStolovi(Stolovi stolovi) {
 		this.stolovi = stolovi;
 	}
-	
 
 	public Narudbe getNarudbe() {
 		return narudbe;
 	}
 
-
-
 	public void setNarudbe(Narudbe narudbe) {
 		this.narudbe = narudbe;
 	}
-	
-	
-
 
 	public static void main(String[] args) {
 		if (args.length == 1) {
