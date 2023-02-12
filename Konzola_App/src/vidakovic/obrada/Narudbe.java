@@ -98,13 +98,14 @@ public class Narudbe {
 				start.getStolovi().getStolovi().size());
 		n.setStol(start.getStolovi().getStolovi().get(i - 1));
 
-//		while (true) {
-//			start.getGosti().pregled(false);
-//			int j = Pomocno.unosBrojaRaspon("Odaberite goste za dodavanje na stol: ", 1,
-//					start.getGosti().getGosti().size());
-//			n.getGosti().add(
-//					start.getGosti().getGosti().get(j-1));
-//		}
+		while (true) {
+			start.getGosti().pregled(false);
+			int j = Pomocno.unosBrojaRaspon("Odaberite goste za dodavanje na stol: ", 1,
+					start.getGosti().getGosti().size());
+			n.getGosti().add(
+					start.getGosti().getGosti().get(j-1));
+			break;
+		}
 
 		narudbe.add(n);
 		izbornik();

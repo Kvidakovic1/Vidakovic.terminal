@@ -84,8 +84,9 @@ public class Narucivanja {
 		int j = Pomocno.unosBrojaRaspon("Unesite narudbu koju zelite mjenjati: ", 1,
 				start.getNarudbe().getNarudbe().size());
 		o.setNarudba(start.getNarudbe().getNarudbe().get(j - 1));
+		o.getArtikli().clear();
 		while (true) {
-			o.getArtikli().clear();
+			
 			start.getArtikli().pregled(false);
 			int z = Pomocno.unosBrojaRaspon("Koje artikl zelite naruciti?", 1, start.getArtikli().getArtikli().size());
 

@@ -1,4 +1,4 @@
-//cd /d E:\java   
+//cd /d E:\java     
 //E:\Java\Vidakovic.terminal\Konzola_App\bin>java vidakovic.Start dev
 
 package vidakovic;

@@ -9,14 +9,14 @@ public class Narudba extends Entitet {
 	
 	
 	private Stol stol;
-	private List<Gosti> gosti;
+	private List<Gost> gosti;
 	
 	
 	public Narudba() {
 		super();
 		gosti = new ArrayList<>();
 	}
-	public Narudba(int sifra, Stol stol, List<Gosti> gosti) {
+	public Narudba(int sifra, Stol stol, List<Gost> gosti) {
 		super(sifra);
 		this.stol = stol;
 		this.gosti = gosti;
@@ -27,10 +27,10 @@ public class Narudba extends Entitet {
 	public void setStol(Stol stol) {
 		this.stol = stol;
 	}
-	public List<Gosti> getGosti() {
+	public List<Gost> getGosti() {
 		return gosti;
 	}
-	public void setGosti(List<Gosti> gosti) {
+	public void setGosti(List<Gost> gosti) {
 		this.gosti = gosti;
 	}
 	
